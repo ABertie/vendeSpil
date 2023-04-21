@@ -1,5 +1,6 @@
 const IMAGES = []
 const CONTAINER = document.querySelector('.container')
+const POINT = document.querySelector('.point')
 
 function REQUEST() {
     for(let i = 0; i < 8; i++) {
@@ -28,8 +29,36 @@ function INSERT() {
     }
 }
 
+function FLIP() {
+    CONTAINER.addEventListener('click', function(event) {
+        if (event.target.tagName == 'IMG') {
+            let firstElement = null;
+
+            for (let i = 0; i < CONTAINER.length; i++) {
+                if (CONTAINER.children[i].src != null) {
+                    console.log('src is not null');
+                    if (firstElement != null) {
+                        if (CONTAINER.children[i].src == firstElement.src) {
+                            console.log('found same src');
+                        }
+                    } else {
+                        firstElement = CONTAINER.children[i];
+
+                        console.log('assigned first elementZ½');
+                    }
+
+                }
+            }
+        }
+    })
+}
+
+            
+
 REQUEST();
 
 RANDOMIZE();
 
 INSERT();
+
+FLIP();

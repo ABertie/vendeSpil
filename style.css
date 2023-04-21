@@ -27,7 +27,7 @@ section {
     flex-wrap: wrap;
     gap: 1rem;
 
-    height: 70vh;
+    width: min(60vh, 90vw);
     aspect-ratio: 1 / 1;
 
     border: 2px solid black;
@@ -49,11 +49,24 @@ section {
     -webkit-box-shadow: 0px 0px 5px 2px rgba(171,171,171,1);
     -moz-box-shadow: 0px 0px 5px 2px rgba(171,171,171,1);
     box-shadow: 0px 0px 5px 2px rgba(171,171,171,1);
+    transition: transform .15s;
     
+}
+
+.container img:hover{
+    transform: scale(1.1)
 }
 
 .glow {
     color: aliceblue;
-    text-shadow: 120px 80px 40px 20px #0ff;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(0, 238, 255),
+    0 0 82px rgb(0, 238, 255),
+    0 0 92px rgb(0, 238, 255),
+    0 0 102px rgb(0, 238, 255),
+    0 0 151px rgb(0, 238, 255);
 }
 
